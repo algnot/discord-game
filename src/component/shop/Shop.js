@@ -123,7 +123,7 @@ export default function Shop({setShowShop}) {
                     </div>
                     <div className={style.item}>
                         <div style={{display:'flex' , alignItems: 'flex-start'}}>
-                           Delay-10ms  (<img src={coin} alt="coin" /> x 1200)
+                        <img src={magic} alt="magic" /> - 10ms  (<img src={coin} alt="coin" /> x 1200)
                         </div>
                         <div>
                             <span className={style.btn}onClick={deCreteAutoDelay}>-</span> {autoDelay} <span className={style.btn}onClick={inCreteAutoDelay}>+</span>

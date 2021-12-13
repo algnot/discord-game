@@ -3,6 +3,8 @@ import style from './index.module.css'
 import background from "./img/bg.png"
 import coin from "./img/coin.png"
 import React , { useState , useEffect } from 'react'
+import fire from './img/fire.png'
+import magic from './img/magic.png'
 import queryString from 'query-string'
 import Game from './component/game/Game'
 import {firestore} from './firebase/firebase'
@@ -57,9 +59,9 @@ function App() {
          </div>
          <div className={style.status}>
           Status <br/> <br/> 
-          Attack : {user.ATK} <br/> <br/> 
-          Auto attack : {user.autoATK} <br/> <br/>  
-          (every {user.autoDelay} ms)
+          <img src={fire} alt="fire" /> x {user.ATK} &nbsp; 
+          <img src={magic} alt="magic" /> x {user.autoATK} <br/> <br/>  
+          (<img src={magic} alt="magic" /> {user.autoDelay} ms)
          </div>
       </div>
       {

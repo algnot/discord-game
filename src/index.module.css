@@ -86,6 +86,11 @@
     border-radius: 10px;
 }
 
+.status img{
+    width: 20px;
+    height: 20px;
+}
+
 @keyframes title {
     0.0%{
         transform: translate(0,-90px);
