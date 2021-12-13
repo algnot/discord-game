@@ -14,16 +14,17 @@ import Shop from '../shop/Shop'
 const monsterInfo = [ 
     {name:'solomon'  , life:100 , reward:20 , pic : demon1},
     {name:'domino'   , life:120 , reward:25 , pic : demon2}, 
-    {name:'watapong' , life:60  , reward:10 , pic : demon3}, 
+    {name:'watapong' , life:60  , reward:15 , pic : demon3}, 
     {name:'mamalo'   , life:200 , reward:30 , pic : demon4} 
 ]
 
 export default function Game() {
 
-    const user = queryString.parse(window.location.search).user; 
+    const user = queryString.parse(window.location.search).user
     const [isAuto, setIsAuto] = useState(false)
 
     const [showShop, setShowShop] = useState(false)
+    const [showKeyboard, setShowKeyboard] = useState(true)
 
     const [monster, setMonster] = useState({
         name:'null'   , life:999999 , reward:0 , pic : ''
@@ -60,10 +61,10 @@ export default function Game() {
                 })
             }     
         })
+        
     }, [])
 
-    const onHit = () => {
-        if(hit) return
+    function onHit () {
         if(HP <= 0){
             setHit(false)
             setHP('loading..')
@@ -104,12 +105,24 @@ export default function Game() {
         return () => clearInterval(interval);
     }
 
+    const setkeyBoard = () => {
+        setShowKeyboard(false)
+        document.addEventListener('keydown', onHit);
+    }
+
     return (
         <>
         <div className={style.shop}
              onClick={() => setShowShop(true)}>
             <img src={shop} alt="shop" /> shop
         </div>
+        {
+            showKeyboard && 
+            <div className={style.key}
+             onClick={() => setkeyBoard()}>
+                <img src={fire} alt="fire" /> Use keyboard
+            </div>
+        }
         {
             !isAuto  &&
             <div className={style.auto} onClick={autoAttack}>
@@ -130,11 +143,18 @@ export default function Game() {
                  onClick={onHit}
                  style={{backgroundImage: `url(${monster.pic})` }}>
                 {
-                    hit && <img src={fire} alt="fire" /> 
+                    hit && HP > 0 && <img src={fire} alt="fire" /> 
                 }
                 {
-                    magicA && <img src={magic} alt="magic" /> 
+                    magicA && HP > 0 && <img src={magic} alt="magic" /> 
                 }
+                {
+                    HP <= userInfo.ATK && 
+                    <div className={style.finish}>
+                        Click to finish <br/>
+                        Can't use keyboard/auto
+                    </div>
+                }  
             </div>
         </div>
         </>

@@ -86,12 +86,53 @@
     cursor: pointer;
 }
 
+.key{
+    position: fixed;
+    bottom: 0;
+    margin: 6px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #865441;
+    padding: 5px;
+    border-radius: 8px;
+    border: 3px solid #5e3424;
+    box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.key:hover{
+    background-color: #7a4936;
+    box-shadow: 13px 14px 5px -7px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 13px 14px 5px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 13px 14px 5px -7px rgba(0,0,0,0.75);
+}
+
+.key img{
+    height: 33px;
+}
+
 .auto:hover{
     background-color: #7a4936;
 }
 
 .auto img{
     height: 33px;
+}
+
+.finish{
+    background-color: #000000E0;
+    padding: 4px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 18pt;
 }
 
 @keyframes fire {
@@ -118,6 +159,12 @@
     }
     49.8%{
         transform: translate(0,-60px);
+    }
+}
+
+@media (max-width : 700px){
+    .key {
+        display: none; 
     }
 }
 
