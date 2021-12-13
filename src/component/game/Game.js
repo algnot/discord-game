@@ -84,6 +84,14 @@ export default function Game() {
                     setHP(monsterInfo[rand].life)
                     setHit(false)
                 })
+                firestore.collection('history')
+                .add({
+                    username : userInfo.username,
+                    reward : monster.reward,
+                    usernameId : userInfo.id,
+                    stemp : new Date().valueOf(),
+                    monster : monster
+                })
             })
             return
         } else {
