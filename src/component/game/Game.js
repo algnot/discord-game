@@ -12,10 +12,10 @@ import queryString from 'query-string'
 import Shop from '../shop/Shop'
 
 const monsterInfo = [ 
-    {name:'solomon'  , life:100 , reward:20 , pic : demon1},
-    {name:'domino'   , life:120 , reward:25 , pic : demon2}, 
-    {name:'watapong' , life:60  , reward:15 , pic : demon3}, 
-    {name:'mamalo'   , life:200 , reward:30 , pic : demon4} 
+    {name:'solomon'  , life:150 , reward:20 , pic : demon1},
+    {name:'domino'   , life:170 , reward:25 , pic : demon2}, 
+    {name:'watapong' , life:110  , reward:15 , pic : demon3}, 
+    {name:'mamalo'   , life:250 , reward:30 , pic : demon4} 
 ]
 
 export default function Game() {
