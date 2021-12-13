@@ -1,0 +1,105 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-repeat: repeat-x;
+    background-size: auto 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textHead{
+    font-size: 35px;
+    text-align: center;
+    -webkit-text-stroke: 1px white;
+    text-shadow: 3px 3px #ff0000;
+    animation: title 1s ease 0s normal none;
+}
+
+
+.textTitle{
+    text-align: right;
+    margin-top: 10px;
+    animation: title 1s ease 0s normal none;
+}
+
+.textError{
+    text-align: center;
+    margin-top: 27px;
+    font-size: 24px;
+    text-shadow: 2px 2px #ff0000;
+    cursor: pointer;
+    animation: title2 1s ease 0s normal none;
+}
+
+.textMenu{
+    text-align: center;
+    margin-top: 27px;
+    font-size: 24px;
+    text-shadow: 2px 2px #69ff12;
+    cursor: pointer;
+    animation: title2 1s ease 0s normal none;
+}
+
+.textMenu:hover{
+    text-shadow: 2px 2px #ff0000;
+}
+
+.coin{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin: 6px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.coin img{
+    height: 33px;
+}
+
+.point{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    margin: 6px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: right;
+}
+
+.status{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    margin: 6px;
+    font-size: 12px;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+@keyframes title {
+    0.0%{
+        transform: translate(0,-90px);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+@keyframes title2 {
+    0.0%{
+        transform: translate(0,90px);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
