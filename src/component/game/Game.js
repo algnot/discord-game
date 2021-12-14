@@ -115,7 +115,7 @@ export default function Game() {
 
     const setkeyBoard = () => {
         setShowKeyboard(false)
-        document.addEventListener('keydown', onHit);
+        document.addEventListener('keyup', onHit);
     }
 
     return (
