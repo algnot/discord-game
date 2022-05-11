@@ -39,35 +39,35 @@ export default function Shop({setShowShop}) {
 
     const inCreteAtk = () => {
         setAtk((atk) => atk = atk + 1)
-        setCoin((coin) => coin = coin - 1500)
+        setCoin((coin) => coin = coin - 200)
     }
 
     const deCreteAtk = () => {
         if(atk <= 0) return
         setAtk((atk) => atk = atk - 1)
-        setCoin((coin) => coin = coin + 1500)
+        setCoin((coin) => coin = coin + 200)
     }
 
     const inCreteAutoAtk = () => {
         setAutoAtk((autoAtk) => autoAtk = autoAtk + 1)
-        setCoin((coin) => coin = coin - 3000)
+        setCoin((coin) => coin = coin - 700)
     }
 
     const deCreteAutoAtk = () => {
         if(autoAtk <= 0) return
         setAutoAtk((autoAtk) => autoAtk = autoAtk - 1)
-        setCoin((coin) => coin = coin + 3000)
+        setCoin((coin) => coin = coin + 700)
     }
 
     const inCreteAutoDelay = () => {
         setAutoDelay((autoDelay) => autoDelay = autoDelay + 10)
-        setCoin((coin) => coin = coin - 1200)
+        setCoin((coin) => coin = coin - 700)
     }
 
     const deCreteAutoDelay= () => {
         if(autoDelay <= 0) return
         setAutoDelay((autoDelay) => autoDelay = autoDelay - 10)
-        setCoin((coin) => coin = coin + 1200)
+        setCoin((coin) => coin = coin + 700)
     }
 
     const Confirm = () => {
@@ -107,7 +107,7 @@ export default function Shop({setShowShop}) {
                 <div className={style.content}>
                     <div className={style.item}>
                         <div style={{display:'flex' , alignItems: 'flex-start'}}>
-                            <img src={fire} alt="fire" /> + 1  (<img src={coin} alt="coin" /> x 1500)
+                            <img src={fire} alt="fire" /> + 1  (<img src={coin} alt="coin" /> x 200)
                         </div>
                         <div>
                             <span className={style.btn}onClick={deCreteAtk}>-</span> {atk} <span className={style.btn}onClick={inCreteAtk}>+</span>
@@ -115,7 +115,7 @@ export default function Shop({setShowShop}) {
                     </div>
                     <div className={style.item}>
                         <div style={{display:'flex' , alignItems: 'flex-start'}}>
-                            <img src={magic} alt="magic" /> + 1  (<img src={coin} alt="coin" /> x 3000)
+                            <img src={magic} alt="magic" /> + 1  (<img src={coin} alt="coin" /> x 700)
                         </div>
                         <div>
                             <span className={style.btn}onClick={deCreteAutoAtk}>-</span> {autoAtk} <span className={style.btn}onClick={inCreteAutoAtk}>+</span>
@@ -123,7 +123,7 @@ export default function Shop({setShowShop}) {
                     </div>
                     <div className={style.item}>
                         <div style={{display:'flex' , alignItems: 'flex-start'}}>
-                        <img src={magic} alt="magic" /> - 10ms  (<img src={coin} alt="coin" /> x 1200)
+                        <img src={magic} alt="magic" /> - 10ms  (<img src={coin} alt="coin" /> x 700)
                         </div>
                         <div>
                             <span className={style.btn}onClick={deCreteAutoDelay}>-</span> {autoDelay} <span className={style.btn}onClick={inCreteAutoDelay}>+</span>
