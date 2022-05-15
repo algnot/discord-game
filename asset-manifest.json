@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/discord-game/static/css/main.33e7b882.chunk.css",
-    "main.js": "/discord-game/static/js/main.35621087.chunk.js",
-    "main.js.map": "/discord-game/static/js/main.35621087.chunk.js.map",
+    "main.js": "/discord-game/static/js/main.f4d3bbba.chunk.js",
+    "main.js.map": "/discord-game/static/js/main.f4d3bbba.chunk.js.map",
     "runtime-main.js": "/discord-game/static/js/runtime-main.d8f000b7.js",
     "runtime-main.js.map": "/discord-game/static/js/runtime-main.d8f000b7.js.map",
     "static/js/2.6c71c66d.chunk.js": "/discord-game/static/js/2.6c71c66d.chunk.js",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.d8f000b7.js",
     "static/js/2.6c71c66d.chunk.js",
     "static/css/main.33e7b882.chunk.css",
-    "static/js/main.35621087.chunk.js"
+    "static/js/main.f4d3bbba.chunk.js"
   ]
 }
